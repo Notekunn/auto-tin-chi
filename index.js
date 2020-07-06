@@ -31,6 +31,7 @@ async function main() {
             login(page)
     });
     await registerCourse(page, step);
-    // await browser.close();
+    console.log("Đóng trình duyệt");
+    await browser.close();
 }
 main();

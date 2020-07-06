@@ -4,7 +4,7 @@ module.exports = async function (page) {
 
     console.log(`Mã sinh viên: ${process.env.STUDENT_CODE}`);
     await page.type('input[name="txtUserName"]', process.env.STUDENT_CODE);
-    console.log(`Mật khẩu: ${process.env.PASSWORD}`);
+    console.log(`Mật khẩu: ${'*'.repeat(process.env.PASSWORD.length)}`);
     await page.type('input[name="txtPassword"]', process.env.PASSWORD);
     console.log(`Tiến hành đăng nhập`);
     await page.click('input[name="btnSubmit"]');
